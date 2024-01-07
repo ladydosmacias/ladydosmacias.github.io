@@ -221,8 +221,9 @@ p:last-child {
 }
 
 .logo--img img {
-    width: 50px;
-    border-radius: 50%;
+    width: 300px;
+    border-radius: 10%;
+    margin-left: 100px;
 }
 
 .logo--content h1 {
@@ -584,7 +585,7 @@ p:last-child {
 
 .cool-link:hover::after {
     width: 100%;
-    //transition: width .3s;
+    /** transition: width .3s; */
 }
 
 .container a{
@@ -702,7 +703,7 @@ body.scrolled .header--navbar {
 }
 
 .header--navbar .navbar-toggle .icon-bar {
-    background-color: #303030;
+    background-color: #acacac;
 }
 
 /* 2.3. HEADER NAVBAR BRAND */
@@ -723,7 +724,7 @@ body.scrolled .header--navbar {
 .header--nav .nav li a {
     position: relative;
     padding: 15px 0 10px;
-    color: #303030;
+    color: #007d6b;
     outline: 0;
 }
 
@@ -740,7 +741,7 @@ body.scrolled .header--navbar {
     bottom: 8px;
     width: 0;
     height: 2px;
-    background-color: #303030;
+    background-color: #007d6b;
     -webkit-transition: width .25s ease-in-out;
             transition: width .25s ease-in-out;
 }
@@ -807,6 +808,16 @@ body.scrolled .header--navbar {
 .banner--item {
     height: 100%;
     background-attachment: scroll;
+}
+
+.banner--item h1 {
+    font-size: 65px;
+    text-transform: uppercase;
+}
+
+.banner--item p {
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
 .banner--item.bg--overlay:before {
