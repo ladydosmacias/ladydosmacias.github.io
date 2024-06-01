@@ -50,6 +50,21 @@
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="100">
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span id="close">&times;</span>
+          
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+          
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+          </div>
+
+          
     <!-- Wrapper Start -->
     <div class="wrapper">
         <!-- Preloader Start -->
@@ -174,7 +189,7 @@
                     <!-- Service Item Start -->
                     <div class="col-sm-8 service--item">
                         <div class="service--content">
-                            <h3>Free slots in 2024 private classes!</h3>
+                            <h3>Check prices for private classes!</h3>
                             <p>Contact me and let's find the perfect slot for you</p>       
                         </div>
                     </div>
@@ -183,18 +198,19 @@
                     <!-- Service Item Start -->
                     <div class="col-sm-4 service--item">                        
                         <div class="service--content">
-                            <a href="private-classes.html" class="btn btn--primary" target="_blank" style="background-color: #fff; color: #000000; border-radius: 10px; padding-left: 50px; padding-right: 50px;"><h4><strong>Prices</strong></h4></a>                      
+                         <!-- Trigger the Modal -->
+                            <img id="myImg" src="img/services-img/price-list.png" alt="Prices for private classes" style="width:100%;max-width:300px">                   
                         </div>
                     </div>
                     <!-- Service Item End -->
                 </div>
             </div>
+
         </div>
         <!-- Services Area End -->                                               
 
         <!-- About Ara Start -->
         <div id="about">
-
             <div class="container">
                 <!-- Section Title Start -->
                  <div class="modal-body" style="padding: 0px 60px; margin-top: 0;">
@@ -205,58 +221,75 @@
                     <img><h2><strong>About</strong></h2>
                 </div>
                 <!-- Section Title End -->
-                
-                <div class="row" style="margin-left: 15px; margin-right: 15px;">
-                    <div class="col-sm-8">
-                        <h3>
-                        Hola, My name is Lady Macías.</h3>
 
-                        <div class="whoiam">
-                            <p>Originally from South America, but raised in Spain. I am an experienced dancer for many years and I have learnt from the top-dancers around the world owning my personal style. 
-                            <br>
-                                <div class="dot1"></div>
-                                <div class="dot2"></div>
-                                <div class="dot3"></div>
-                            <br>
-                            <br>
-                            <br>
-                            <br>                          
-                        </div>
-                        
-                        <a href="https://www.instagram.com/lady2macias/?hl=fi" class="btn btn--primary" target="_blank" style="color: #fff">Follow me on Instagram</a>
-                    </div>
+                <div class="row" style="margin-right: 5px; margin-left: 5px; margin-bottom: 5%;">
+                    <h4 style="text-align: center; margin-top: 0%; margin-bottom: 8%; letter-spacing: 1px; line-height: 1.8; margin-left: 15%; margin-right: 15%;">Originally from South America, but raised in Spain. I am an experienced dancer for many years and I have learnt from the top-dancers around the world owning my personal style.</h4>
                     
-                    <div class="col-sm-4">
-                        <img src="img/favicon.png" class="img-responsive" alt="">
+                    <div class="col-md-4" style="margin-top: 20px;">
+                       
+                        <h3 style="display: inline-block; color: #000000;">
+                            Teaching levels
+                        </h3>
+                            <div class="whoiam">
+                                <li>Beginner</li>
+                                <li>Intermediate</li>
+                                <li>Advanced</li>                     
+                            </div>
+                            
+                            <a href="https://www.instagram.com/lady2macias/?hl=fi" class="btn btn--primary" target="_blank" style="color: #fff; margin-top: 10%;">Follow me on Instagram</a>
+                        
+                    </div>
+
+                    <div class="col-md-4" style=" margin-top: 20px">
+                        <h3 style="display: inline-block; color: #000000;">
+                            Possible class content
+                        </h3>
+                              <li>Musicality</li>
+                              <li>Arms and hands (Upper body)</li>
+                              <li>Legs and connections</li>
+                              <li>Techniques</li>
+                              <li>And much more...</li>
+                           
+                    </div>
+
+                    <div class="col-md-4" style=" margin-top: 20px">
+                        <h3 style="display: inline-block; color: #000000;">
+                            Coming up soon!
+                        </h3>
+                              <img src="img/favicon.png" style="width:100%;max-width:200px"/>
+                           
                     </div>
                 </div>
-
             </div>
-        </div></div></div>
         </div>
+    </div>
+</div>
         <!-- About Area End -->
 
-        <!-- Footer Area Start -->
-        <div id="footer">
-            <!-- Contact Social Start -->
-            <div class="contact--social">
-                <ul>
-                    <li><a title="Instagram" target="_blank" href="https://www.instagram.com/lady2macias/?hl=fi"><i class="fa fa-instagram"></i></a></li>               
-                </ul>
-            </div>
-            <!-- Contact Social End -->            
-            <div class="container">
-                <!-- Footer Copyright Start -->
-                <div class="footer--copyright" style="font-weight: 300; color: #999999;">
-                    <p>Copyright &copy; 2024 <a href="index.html" style=" color: #999999;">Lady Macías</a>. All Rights Reserved.</p>
-                </div>
-                <!-- Footer Copyright End -->
-            </div>
-        </div>
-        <!-- Footer Area End -->
-        
+
+
+ </div>
+  <!-- Footer Area Start -->
+  <div id="footer">
+    <!-- Contact Social Start -->
+    <div class="contact--social">
+        <ul>
+            <li><a title="Instagram" target="_blank" href="https://www.instagram.com/lady2macias/?hl=fi"><i class="fa fa-instagram"></i></a></li>               
+        </ul>
     </div>
-    <!-- Wrapper End -->
+    <!-- Contact Social End -->            
+    <div class="container">
+        <!-- Footer Copyright Start -->
+        <div class="footer--copyright" style="font-weight: 300; color: #999999;">
+            <p>Copyright &copy; 2024 <a href="index.html" style=" color: #999999;">Lady Macías</a>. All Rights Reserved.</p>
+        </div>
+        <!-- Footer Copyright End -->
+    </div>
+</div>
+<!-- Footer Area End -->
+
+        </div>
+<!-- Wrapper End -->
 
     <!-- ==== jQuery ==== -->
     <script src="js/jquery.min.js"></script>
@@ -306,6 +339,27 @@
     <!-- ==== Txttype Script ==== -->
     <script src="js/txttype.js"></script>
     
-
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementById("close")
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        </script>
 </body>
 </html>

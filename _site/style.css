@@ -724,7 +724,7 @@ body.scrolled .header--navbar {
 .header--nav .nav li a {
     position: relative;
     padding: 15px 0 10px;
-    color: #007d6b;
+    color: #000000;
     outline: 0;
 }
 
@@ -741,7 +741,7 @@ body.scrolled .header--navbar {
     bottom: 8px;
     width: 0;
     height: 2px;
-    background-color: #007d6b;
+    background-color: #000000;
     -webkit-transition: width .25s ease-in-out;
             transition: width .25s ease-in-out;
 }
