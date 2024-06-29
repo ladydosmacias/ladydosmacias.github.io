@@ -50,6 +50,14 @@
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="100">
+        <script>
+            if (document.location.hostname !== '127.0.0.1') {
+                gtag('event', 'page_load', {
+                'screen_name': 'Home',
+                'event_label': 'open_page'
+            });
+            }
+        </script>
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -106,7 +114,7 @@
         <!-- Header Area End -->
                 
                 <!-- Banner Item Start -->
-                <div class="banner--item" data-bg-img="img/banner-img/banner-img2.png" style="background-position: center; background-size: cover; box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.63)">
+                <div class="banner--item" data-bg-img="img/banner-img/lady_banner.png" style="background-position: center; background-size: cover; box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.63)">
                     <div class="container">
                         <div class="vc--parent">
                             <div class="vc--child">
@@ -199,7 +207,7 @@
                     <div class="col-sm-4 service--item">                        
                         <div class="service--content">
                          <!-- Trigger the Modal -->
-                            <img id="myImg" src="img/services-img/price-list.png" alt="Prices for private classes" style="width:100%;max-width:300px">                   
+                            <img id="myImg" src="img/services-img/price-list-end-year.png" alt="Prices for private classes" style="width:100%;max-width:300px">                   
                         </div>
                     </div>
                     <!-- Service Item End -->
@@ -351,6 +359,12 @@
           modal.style.display = "block";
           modalImg.src = this.src;
           captionText.innerHTML = this.alt;
+          if (document.location.hostname !== '127.0.0.1') {
+            gtag('event', 'click', {
+                'screen_name': 'Home',
+                'event_label': 'Price_list'
+            });
+            }
         }
         
         // Get the <span> element that closes the modal
@@ -359,6 +373,12 @@
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() { 
           modal.style.display = "none";
+          if (document.location.hostname !== '127.0.0.1') {
+            gtag('event', 'click', {
+                'screen_name': 'Home',
+                'event_label': 'Price_list_dismiss'
+            });
+            }
         }
         </script>
 </body>
