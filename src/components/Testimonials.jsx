@@ -14,9 +14,12 @@ const Testimonials = () => {
                 className="object-contain rounded-t-md"
                 src={testimonial.image}
               />
-              <div className="m-4">
-                <h1>{testimonial.title}</h1>
-                <p className="text-md font-thin">{testimonial.text}</p>
+              <div className="m-6">
+                <h1>{testimonial.title} (COMING SOON!)</h1>
+                <p className="mt-2 text-md font-thin">{testimonial.text}</p>
+                <button class="mt-6 bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+                  Privacy policy
+                </button>
                 <div className="flex mt-8 items-start">
                   <div>
                     <span className="text-sm font-normal italic text-neutral-600">

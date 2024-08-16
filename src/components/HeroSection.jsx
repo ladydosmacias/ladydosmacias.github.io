@@ -13,8 +13,8 @@ const HeroSection = () => {
       </h1>
       <p className="mt-10 text-lg text-center text-neutral-500 max-w-4xl">
         Bringing pocket size digital solutions for web and mobile platforms in
-        React Native, ReactJS and Swift. Explore our various projects as a
-        modern and independent developer.
+        React Native, ReactJS and Swift. Explore our projects as a modern and
+        independent developer.
       </p>
       <div className="flex justify-center my-10">
         <a
