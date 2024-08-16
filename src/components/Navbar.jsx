@@ -1,14 +1,71 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/vesimeloni-logo.png";
 import { navItems } from "../constants";
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("");
 
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
+
+  const toggleActiveTab = (tab) => {
+    setActiveTab(() => {
+      return tab;
+    });
+  };
+
+  function smoothScroll(target, duration) {
+    var target = document.querySelector(target);
+    var targetPosition = target.getBoundingClientRect().top;
+    var startPosition = window.pageYOffset;
+    var distance = targetPosition - startPosition;
+    var startTime = null;
+
+    function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      var timeElapsed = currentTime - startTime;
+      var run = easing(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function easing(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return (c / 2) * t * t + b;
+      t--;
+      return (-c / 2) * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+  }
+
+  var homeLink = document.querySelector('nav a[href="#home"]');
+  var knowledgeLink = document.querySelector('nav a[href="#knowledge"]');
+  var projectsLink = document.querySelector('nav a[href="#projects"]');
+
+  if (activeTab.includes("#home")) {
+    console.log("home");
+    homeLink.addEventListener("click", function () {
+      smoothScroll("#home", 1000);
+    });
+  }
+
+  if (activeTab.includes("#knowledge")) {
+    console.log("knowledge");
+    knowledgeLink.addEventListener("click", function () {
+      smoothScroll("#knowledge", 1000);
+    });
+  }
+
+  if (activeTab.includes("#projects")) {
+    console.log("projects");
+    projectsLink.addEventListener("click", function () {
+      smoothScroll("#projects", 1000);
+    });
+  }
 
   return (
     <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
@@ -16,26 +73,18 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
             <img className="h-10 w-10 mr-2" src={logo} alt="Logo" />
-            <span className="text-xl tracking-tight">VirtualR</span>
+            <span className="text-xl tracking-tight">Vesimeloni</span>
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">
             {navItems.map((item, index) => (
               <li key={index}>
-                <a href={item.href}>{item.label}</a>
+                <a href={item.href} onClick={() => toggleActiveTab(item.href)}>
+                  {item.label}
+                </a>
               </li>
             ))}
           </ul>
-          <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <a href="#" className="py-2 px-3 border rounded-md">
-              Sign In
-            </a>
-            <a
-              href="#"
-              className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md"
-            >
-              Create an account
-            </a>
-          </div>
+
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
               {mobileDrawerOpen ? <X /> : <Menu />}
@@ -51,17 +100,6 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <div className="flex space-x-6">
-              <a href="#" className="py-2 px-3 border rounded-md">
-                Sign In
-              </a>
-              <a
-                href="#"
-                className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-800"
-              >
-                Create an account
-              </a>
-            </div>
           </div>
         )}
       </div>
