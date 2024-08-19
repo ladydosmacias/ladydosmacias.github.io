@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { testimonials } from "../constants";
 import PicturePreview from "./PicturePreview";
+import ReactGA from "react-ga4";
 
 const Testimonials = () => {
   const [showModal, setShowModal] = useState(false);
@@ -8,9 +9,16 @@ const Testimonials = () => {
 
   useEffect(() => {}, []);
 
-  const handleOnOpen = (content) => {
+  const handleOnOpen = (content, label) => {
+    // Send click event
+    ReactGA.event({
+      category: "private-class",
+      action: "click",
+      label: label,
+      value: 1,
+    });
+
     setModalContent(content);
-    console.log(content);
     setShowModal(true);
   };
 
@@ -33,7 +41,7 @@ const Testimonials = () => {
         {testimonials.map((testimonial, index) => (
           <div key={index} className="w-full sm:w-1/2 lg:w-1/3 px-4 py-2">
             <button
-              onClick={() => handleOnOpen(testimonial.image)}
+              onClick={() => handleOnOpen(testimonial.image, testimonial.title)}
               className="bg-neutral-900 rounded-md text-md border border-neutral-800"
             >
               <img

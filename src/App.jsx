@@ -4,10 +4,14 @@ import FeatureSection from "./components/FeatureSection";
 import Footer from "./components/Footer";
 import Testimonials from "./components/Testimonials";
 import NewsSection from "./components/NewsSection";
-import { useState } from "react";
-import PicturePreview from "./components/PicturePreview";
+import ReactGA from "react-ga4";
 
 const App = () => {
+  ReactGA.initialize("G-01NVCB1WQ2");
+
+  // Tracking visits on website
+  ReactGA.send({ hitType: "pageview", page: "/home" });
+
   return (
     <>
       <Navbar />
