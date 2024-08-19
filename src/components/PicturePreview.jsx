@@ -26,7 +26,7 @@ const PicturePreview = ({ visible, onClose, image }) => {
     >
       <img
         src={image}
-        style={{ width: windowWidth / 2.8, height: windowHeight / 1.2 }}
+        style={{ height: windowHeight / 1.2 }}
         alt="Logo"
         className="self-center flex mt-7 rounded-lg"
       />
