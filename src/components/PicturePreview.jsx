@@ -1,6 +1,9 @@
-import photo2 from "../assets/price-list-new.png";
-
 const PicturePreview = ({ visible, onClose, image }) => {
+  const windowHeight = window.innerHeight;
+  const windowWidth = window.innerWidth;
+
+  console.log(windowHeight);
+
   const handleOnClose = (e) => {
     if (e.target.id === "container") {
       onClose();
@@ -14,10 +17,19 @@ const PicturePreview = ({ visible, onClose, image }) => {
   return (
     <div
       id="container"
+      style={{
+        height: windowHeight,
+        overflowY: "scroll",
+      }}
       onClick={handleOnClose}
-      className="flex flex-row	overflow-y-auto fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center"
+      className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center"
     >
-      <img src={image} alt="Logo" className="mt-7 rounded-lg w-4/12 " />
+      <img
+        src={image}
+        style={{ width: windowWidth / 2.8, height: windowHeight / 1.2 }}
+        alt="Logo"
+        className="self-center flex mt-7 rounded-lg"
+      />
     </div>
   );
 };

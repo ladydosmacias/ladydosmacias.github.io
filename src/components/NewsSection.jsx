@@ -1,7 +1,7 @@
 const NewsSection = () => {
   return (
     <div className="p-1 justify-self-stretch bg-red-500 text-center">
-      <p>We are constantly working on making the website better!</p>
+      <p>All one time private dance classes -25% until 31.8.2024!</p>
     </div>
   );
 };

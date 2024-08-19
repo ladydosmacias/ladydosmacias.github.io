@@ -5,12 +5,14 @@ import Footer from "./components/Footer";
 import Testimonials from "./components/Testimonials";
 import NewsSection from "./components/NewsSection";
 import ReactGA from "react-ga4";
+import { isProduction } from "./constants/Utils";
 
 const App = () => {
-  ReactGA.initialize("G-01NVCB1WQ2");
-
   // Tracking visits on website
-  ReactGA.send({ hitType: "pageview", page: "/home" });
+  if (isProduction) {
+    ReactGA.initialize("G-01NVCB1WQ2");
+    ReactGA.send({ hitType: "pageview", page: "/home" });
+  }
 
   return (
     <>
