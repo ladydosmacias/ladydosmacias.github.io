@@ -1,7 +1,13 @@
+import { useEffect, useRef } from "react";
 import pic1 from "../assets/pic1.png";
 import video3 from "../assets/video3.mp4";
 
 const HeroSection = () => {
+  const videoRef = useRef(undefined);
+  useEffect(() => {
+    videoRef.current.defaultMuted = true;
+  });
+
   return (
     <div className="flex flex-col items-center mt-6 lg:mt-20" id="home">
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
@@ -31,9 +37,11 @@ const HeroSection = () => {
           className="rounded-lg w-1/2 border border-orange-700 shadow-sm shadow-orange-400 mx-2 my-4"
         />
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
+          playsInline
           className="rounded-lg w-1/2 border border-orange-700 shadow-sm shadow-orange-400 mx-2 my-4"
         >
           <source src={video3} type="video/mp4" />
