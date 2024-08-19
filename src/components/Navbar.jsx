@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "../assets/vesimeloni-logo.png";
+import logo from "../assets/ladydosmacias-logo.png";
 import { navItems } from "../constants";
 
 const Navbar = () => {
@@ -43,8 +43,8 @@ const Navbar = () => {
   }
 
   var homeLink = document.querySelector('nav a[href="#home"]');
-  var knowledgeLink = document.querySelector('nav a[href="#knowledge"]');
-  var projectsLink = document.querySelector('nav a[href="#projects"]');
+  var aboutLink = document.querySelector('nav a[href="#about"]');
+  var privateLink = document.querySelector('nav a[href="#private"]');
 
   if (activeTab.includes("#home")) {
     console.log("home");
@@ -53,17 +53,17 @@ const Navbar = () => {
     });
   }
 
-  if (activeTab.includes("#knowledge")) {
-    console.log("knowledge");
-    knowledgeLink.addEventListener("click", function () {
-      smoothScroll("#knowledge", 1000);
+  if (activeTab.includes("#about")) {
+    console.log("about");
+    aboutLink.addEventListener("click", function () {
+      smoothScroll("#about", 1000);
     });
   }
 
-  if (activeTab.includes("#projects")) {
-    console.log("projects");
-    projectsLink.addEventListener("click", function () {
-      smoothScroll("#projects", 1000);
+  if (activeTab.includes("#private")) {
+    console.log("private");
+    privateLink.addEventListener("click", function () {
+      smoothScroll("#private", 1000);
     });
   }
 
@@ -73,7 +73,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
             <img className="h-10 w-10 mr-2" src={logo} alt="Logo" />
-            <span className="text-xl tracking-tight">Vesimeloni</span>
+            <span className="text-xl tracking-tight">
+              Lady Dos Macias Dance
+            </span>
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">
             {navItems.map((item, index) => (

@@ -1,37 +1,54 @@
+import { useEffect, useState } from "react";
 import { testimonials } from "../constants";
+import PicturePreview from "./PicturePreview";
 
 const Testimonials = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState("");
+
+  useEffect(() => {}, []);
+
+  const handleOnOpen = (content) => {
+    setModalContent(content);
+    console.log(content);
+    setShowModal(true);
+  };
+
+  const handleOnClose = () => setShowModal(false);
+
   return (
-    <div className="mt-20 tracking-wide" id="projects">
-      <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-10 lg:my-20">
-        Projects
-      </h2>
-      <div className="flex flex-wrap justify-center">
+    <div className="mt-20 tracking-wide" id="private">
+      <div className="text-center flex flex-col items-center">
+        <h2 className="text-3xl sm:text-5xl lg:text-6xl tracking-wide">
+          Private classes
+        </h2>
+        <p className="mt-10 text-lg text-neutral-500 max-w-4xl">
+          We are working on enhancing the booking system for the classes. In the
+          meanwhile you can book your private class by contacting me directly
+          either by email or phone (SMS/Whatsapp or Call). You can find contact
+          details from below. Lets book the perfect time for you!
+        </p>
+      </div>
+      <div className="mt-10 flex flex-wrap justify-center">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="w-full sm:w-1/2 lg:w-1/3 px-4 py-2">
-            <div className="bg-neutral-900 rounded-md text-md border border-neutral-800">
+            <button
+              onClick={() => handleOnOpen(testimonial.image)}
+              className="bg-neutral-900 rounded-md text-md border border-neutral-800"
+            >
               <img
                 className="object-contain rounded-t-md"
-                src={testimonial.image}
+                src={testimonial.cover}
               />
-              <div className="m-6">
-                <h1>{testimonial.title} (COMING SOON!)</h1>
-                <p className="mt-2 text-md font-thin">{testimonial.text}</p>
-                <button class="mt-6 bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
-                  Privacy policy
-                </button>
-                <div className="flex mt-8 items-start">
-                  <div>
-                    <span className="text-sm font-normal italic text-neutral-600">
-                      {testimonial.stack}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </button>
           </div>
         ))}
       </div>
+      <PicturePreview
+        onClose={handleOnClose}
+        visible={showModal}
+        image={modalContent}
+      />
     </div>
   );
 };

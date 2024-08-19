@@ -4,15 +4,19 @@ const FeatureSection = () => {
   return (
     <div
       className="relative mt-20 border-b border-neutral-800 min-h-[400px]"
-      id="knowledge"
+      id="about"
     >
-      <div className="text-center">
-        <h2 className="text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide">
-          Know
+      <div className="text-center flex flex-col items-center">
+        <h2 className="text-3xl sm:text-5xl lg:text-6xl tracking-wide">
           <span className="bg-gradient-to-r from-orange-500 to-orange-800 text-transparent bg-clip-text">
-            ledge
+            About
           </span>
         </h2>
+        <p className="mt-10 text-lg text-center text-neutral-500 max-w-4xl">
+          Originally from South America, but raised in Spain. I am an
+          experienced dancer for many years and I have learnt from the
+          top-dancers around the world owning my personal style.
+        </p>
       </div>
       <div className="flex flex-wrap mt-10 lg:mt-20">
         {features.map((feature, index) => (
@@ -23,9 +27,20 @@ const FeatureSection = () => {
               </div>
               <div>
                 <h5 className="mt-1 mb-6 text-xl">{feature.text}</h5>
-                <p className="text-md p-2 mb-20 text-neutral-500">
-                  {feature.description}
-                </p>
+
+                {feature.text !== "Levels of teaching" ? (
+                  <p className="text-md p-0.5 mb-20 text-neutral-500">
+                    {feature.description}
+                  </p>
+                ) : (
+                  <div className="mb-20">
+                    {feature.description.map((item) => (
+                      <li key={item} className="text-neutral-500">
+                        {item}
+                      </li>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>
