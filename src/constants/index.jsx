@@ -1,4 +1,12 @@
-import { BotMessageSquare } from "lucide-react";
+import {
+  Bookmark,
+  BookMarked,
+  BotMessageSquare,
+  Mail,
+  MapPin,
+  PhoneCall,
+  Shapes,
+} from "lucide-react";
 import { PlugZap } from "lucide-react";
 import { GlobeLock } from "lucide-react";
 
@@ -39,20 +47,25 @@ export const testimonials = [
 
 export const features = [
   {
-    icon: <BotMessageSquare />,
+    icon: <BookMarked />,
     text: "Levels of teaching",
     description: ["Beginner", "Intermediate", "Advanced"],
   },
   {
-    icon: <PlugZap />,
+    icon: <Shapes />,
     text: "Classes",
     description:
       "I offer private classes in both Salsa and Bachata. Your level can be anywhere from beginner to advanced. and you can book the private class alone (on1) or with a friend or partner (on2). I teach Bachata Sensual with a twist in my own style.",
   },
   {
-    icon: <GlobeLock />,
+    icon: <MapPin />,
     text: "Location",
     description:
       "I can provide a space for our private dance classes in the beautiful Kirkkonummi. My space is just 10 minutes bus drive from Kivenlahti Metro Station. Alternatively I can also teach you at the location of your choice in Espoo & Helsinki area.",
   },
 ];
+
+export const commonIcons = {
+  phone: <PhoneCall />,
+  email: <Mail />,
+};

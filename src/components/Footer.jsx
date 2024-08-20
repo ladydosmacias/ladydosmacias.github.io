@@ -1,10 +1,21 @@
+import { commonIcons } from "../constants";
+
 const Footer = () => {
   return (
     <footer className="mt-20 border-t py-10 border-neutral-700">
-      <div className="justify-items-center grid grid-cols-2 lg:grid-cols-3 gap-4">
-        <p>PHONE: +358 41 312 4778</p>
-        <p>EMAIL: lady2macias@outlook.es</p>
-        <p>@LadyDosMacias2024</p>
+      <h2 className="text-2xl tracking-wide">Contact</h2>
+      <div className="flex flex-row justify-between">
+        <div className="flex flex-col">
+          <div className="flex flex-row mt-4">
+            {commonIcons.phone}
+            <p className="ml-3">+358 41 312 4778</p>
+          </div>
+          <div className="flex flex-row mt-4">
+            {commonIcons.email}
+            <p className="ml-3">lady2macias@outlook.es</p>
+          </div>
+        </div>
+        <p className="mt-4">@LadyDosMacias2024</p>
       </div>
     </footer>
   );
