@@ -1,6 +1,5 @@
 const PicturePreview = ({ visible, onClose, image }) => {
   const windowHeight = window.innerHeight;
-  const windowWidth = window.innerWidth;
 
   console.log(windowHeight);
 
@@ -26,7 +25,7 @@ const PicturePreview = ({ visible, onClose, image }) => {
     >
       <img
         src={image}
-        style={{ height: windowHeight / 1.4 }}
+        style={{ height: windowHeight / 1.5 }}
         alt="Logo"
         className="self-center flex mt-7 rounded-lg"
       />
