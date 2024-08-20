@@ -14,6 +14,14 @@ const Footer = () => {
             {commonIcons.email}
             <p className="ml-3">lady2macias@outlook.es</p>
           </div>
+          <a
+            className="flex flex-row mt-4"
+            href="https://www.instagram.com/lady2macias/?hl=fi"
+            target="_blank"
+          >
+            {commonIcons.instagram}
+            <p className="ml-3">Follow me!</p>
+          </a>
         </div>
         <p className="mt-4">@LadyDosMacias2024</p>
       </div>

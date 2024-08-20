@@ -1,21 +1,18 @@
 import {
-  Bookmark,
   BookMarked,
-  BotMessageSquare,
+  Instagram,
   Mail,
   MapPin,
   PhoneCall,
   Shapes,
 } from "lucide-react";
-import { PlugZap } from "lucide-react";
-import { GlobeLock } from "lucide-react";
 
-import photo2 from "../assets/price-list-new.png";
 import photo3 from "../assets/class-content.png";
+import photo2 from "../assets/price-list-new.png";
 import photo4 from "../assets/where-to-find.png";
 
-import cover1 from "../assets/prices-cover.png";
 import cover2 from "../assets/class-content-coming.png";
+import cover1 from "../assets/prices-cover.png";
 import cover3 from "../assets/where-to-find-coming.png";
 
 export const navItems = [
@@ -68,4 +65,5 @@ export const features = [
 export const commonIcons = {
   phone: <PhoneCall />,
   email: <Mail />,
+  instagram: <Instagram />,
 };
