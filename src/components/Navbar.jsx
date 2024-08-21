@@ -77,6 +77,7 @@ const Navbar = () => {
               Lady Dos Macias Dance
             </span>
           </div>
+
           <ul className="hidden lg:flex ml-14 space-x-12">
             {navItems.map((item, index) => (
               <li key={index}>
@@ -86,7 +87,6 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
               {mobileDrawerOpen ? <X /> : <Menu />}

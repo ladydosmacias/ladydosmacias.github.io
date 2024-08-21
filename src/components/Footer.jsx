@@ -22,7 +22,7 @@ const Footer = () => {
             {commonIcons.instagram}
             <p className="ml-3">Follow me!</p>
           </a>
-          <p className="mt-4">@LadyDosMacias2024</p>
+          <p className="mt-4">© 2024 Lady Dos Macias</p>
         </div>
       </div>
     </footer>
