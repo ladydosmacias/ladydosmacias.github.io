@@ -2,6 +2,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/ladydosmacias-logo.png";
 import { navItems } from "../constants";
+import Typewriter from "typewriter-effect";
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -73,9 +74,30 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
             <img className="h-10 w-10 mr-2" src={logo} alt="Logo" />
-            <span className="text-xl tracking-tight">
-              Lady Dos Macias Dance
-            </span>
+            <div>
+              <span className="text-xl tracking-tight">
+                Lady Dos Macias Dance
+              </span>
+              <Typewriter
+                options={{ loop: true }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("Salsa dancer")
+                    .pauseFor(1500)
+                    .deleteAll()
+                    .typeString("Bachata dancer")
+                    .pauseFor(1500)
+                    .deleteAll()
+                    .typeString("Choreographer")
+                    .pauseFor(1500)
+                    .deleteAll()
+                    .typeString("Dance teacher")
+                    .pauseFor(1500)
+                    .deleteAll()
+                    .start();
+                }}
+              />
+            </div>
           </div>
 
           <ul className="hidden lg:flex ml-14 space-x-12">
