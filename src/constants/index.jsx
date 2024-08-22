@@ -52,7 +52,7 @@ export const features = [
     icon: <Shapes />,
     text: "Classes",
     description:
-      "I offer private classes in both Salsa and Bachata. Your level can be anywhere from beginner to advanced. and you can book the private class alone (on1) or with a friend or partner (on2). I teach Bachata Sensual with a twist in my own style.",
+      "I offer private classes in both Salsa and Bachata. Your level can be anywhere from beginner to advanced, and you can book the private class alone or with a friend or partner. I teach Bachata Sensual with a twist in my own style.",
   },
   {
     icon: <MapPin />,
