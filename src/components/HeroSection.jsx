@@ -34,7 +34,7 @@ const HeroSection = () => {
         <img
           src={pic1}
           alt="Logo"
-          className="rounded-lg w-1/2 border border-orange-700 shadow-sm shadow-orange-400 mx-2 my-4"
+          className="rounded-lg w-1/2 drop-shadow-xl mx-2 my-8"
         />
         <video
           ref={videoRef}
@@ -42,7 +42,7 @@ const HeroSection = () => {
           loop
           muted
           playsInline
-          className="rounded-lg w-1/2 border border-orange-700 shadow-sm shadow-orange-400 mx-2 my-4"
+          className="rounded-lg w-1/2 drop-shadow-xl mx-2 my-8"
         >
           <source src={video3} type="video/mp4" />
           Your Browser does not support HTML video.

@@ -1,14 +1,12 @@
-import { useEffect, useState } from "react";
-import { testimonials } from "../constants";
-import PicturePreview from "./PicturePreview";
+import { useState } from "react";
 import ReactGA from "react-ga4";
+import { testimonials } from "../constants";
 import { isProduction } from "../constants/Utils";
+import PicturePreview from "./PicturePreview";
 
 const Testimonials = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState("");
-
-  useEffect(() => {}, []);
 
   const handleOnOpen = (content, label) => {
     // Send click event

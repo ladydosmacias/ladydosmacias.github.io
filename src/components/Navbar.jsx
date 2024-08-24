@@ -3,6 +3,7 @@ import { useState } from "react";
 import logo from "../assets/ladydosmacias-logo.png";
 import { navItems } from "../constants";
 import Typewriter from "typewriter-effect";
+import ReactGA from "react-ga4";
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -48,23 +49,41 @@ const Navbar = () => {
   var privateLink = document.querySelector('nav a[href="#private"]');
 
   if (activeTab.includes("#home")) {
-    console.log("home");
     homeLink.addEventListener("click", function () {
-      smoothScroll("#home", 1000);
+      if (isProduction) {
+        ReactGA.event({
+          category: "nav-home",
+          action: "click",
+          value: 1,
+        });
+        smoothScroll("#home", 1000);
+      }
     });
   }
 
   if (activeTab.includes("#about")) {
-    console.log("about");
     aboutLink.addEventListener("click", function () {
-      smoothScroll("#about", 1000);
+      if (isProduction) {
+        ReactGA.event({
+          category: "nav-about",
+          action: "click",
+          value: 1,
+        });
+        smoothScroll("#about", 1000);
+      }
     });
   }
 
   if (activeTab.includes("#private")) {
-    console.log("private");
     privateLink.addEventListener("click", function () {
-      smoothScroll("#private", 1000);
+      if (isProduction) {
+        ReactGA.event({
+          category: "nav-private",
+          action: "click",
+          value: 1,
+        });
+        smoothScroll("#private", 1000);
+      }
     });
   }
 
