@@ -11,7 +11,7 @@ import photo3 from "../assets/class-content.png";
 import photo2 from "../assets/price-list-new.png";
 import photo4 from "../assets/where-to-find.png";
 
-import cover2 from "../assets/class-content-coming.png";
+import cover2 from "../assets/class-content-cover.png";
 import cover1 from "../assets/prices-cover.png";
 import cover3 from "../assets/where-to-find-coming.png";
 
