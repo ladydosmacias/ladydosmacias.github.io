@@ -58,7 +58,7 @@ export const features = [
     icon: <MapPin />,
     text: "Location",
     description:
-      "I can provide a space for our private dance classes in the beautiful Kirkkonummi. My space is just 10 minutes bus drive from Kivenlahti Metro Station. Alternatively I can also teach you at the location of your choice in Espoo & Helsinki area.",
+      "I can teach you at the location of your choice in Espoo & Helsinki area. We can talk about the options while choosing the right time for you.",
   },
 ];
 
