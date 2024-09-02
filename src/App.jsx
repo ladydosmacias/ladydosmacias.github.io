@@ -6,6 +6,7 @@ import Testimonials from "./components/Testimonials";
 import NewsSection from "./components/NewsSection";
 import ReactGA from "react-ga4";
 import { isProduction } from "./constants/Utils";
+import WebsiteUpdating from "./components/WebSiteUpdating";
 
 const App = () => {
   // Tracking visits on website
@@ -16,14 +17,15 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <NewsSection className="m-0" />
       <div className="max-w-7xl mx-auto pt-20 px-6">
         <HeroSection />
         <FeatureSection />
         <Testimonials />
         <Footer />
-      </div>
+      </div> */}
+      <WebsiteUpdating />
     </>
   );
 };
